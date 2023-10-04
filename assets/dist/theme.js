@@ -14,4 +14,17 @@ jQuery(document).ready(function ($) {
     $(this).parent().toggleClass('sub-menu-open');
     $(this).siblings(".sub-menu").slideToggle();
   });
+  var videoElement = document.querySelector('video');
+  var playPauseButton = document.querySelector('button');
+  playPauseButton.addEventListener('click', function () {
+    playPauseButton.classList.toggle('playing');
+    if (playPauseButton.classList.contains('playing')) {
+      videoElement.play();
+    } else {
+      videoElement.pause();
+    }
+  });
+  videoElement.addEventListener('ended', function () {
+    playPauseButton.classList.remove('playing');
+  });
 });

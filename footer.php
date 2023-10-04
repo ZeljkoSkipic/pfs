@@ -9,12 +9,36 @@
  * @package s-tier
  */
 
+
+$phone = get_field('phone_number', 'option');
+
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer space_1">
 		<div class="footer_inner container">
-			<div class="col copy">
-				© 2023 S-Tier Dev Digital Agency
+			<div class="col">
+				<?php
+				$button = get_field('button', 'option');
+				if( $button ):
+					$button_url = $button['url'];
+					$button_title = $button['title'];
+					$button_target = $button['target'] ? $button['target'] : '_self';
+					?>
+					<a class="btn-1" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
+				<?php endif; ?>
+			</div>
+			<div class="col">
+				<?php
+				$logo = get_field('logo', 'option');
+				$size = 'full';
+				if( $logo ) {
+					echo wp_get_attachment_image( $logo, $size, "", array( "class" => "logo" ) );
+				} ?>
+				<span class="copy"><?php the_field('copy', 'option'); ?></span>
+			</div>
+			<div class="col">
+				<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+				<div><?php the_field('address', 'option'); ?></div>
 			</div>
 		</div>
 	</footer>

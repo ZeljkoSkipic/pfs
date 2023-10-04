@@ -1,8 +1,59 @@
 footer {
+	background-color: #000;
 	.footer_inner {
-		@include flex;
+		@include flex-between;
+		@include mob-only {
+			flex-direction: column;
+		}
 		.col {
+			@include flex-col;
+			@include tab-min {
+				width: 30%;
+			}
+			@include mob-only {
+				&:not(:last-child) {
+					margin-bottom: var(--space-2);
+				}
+			}
+			&:first-child {
+				align-items: flex-start;
+			}
+			&:nth-child(2) {
+				@include tab-min {
+					align-items: center;
+				}
+				img {
+					max-width: 230px;
+					object-fit: contain;
+					height: auto;
+				}
+				.copy {
+					color: #fff;
+					font-size: 14px;
+					margin-top: 8px;
+					@include tab-min {
+						text-align: center;
+					}
+				}
+			}
+			&:last-child {
+				a {
+					color: #fff;
+					font-weight: 600;
+					margin-bottom: 8px;
+				}
+				p {
+					color: #fff;
+					margin-top: 0;
+				}
+				@include tab-min {
+					align-items: flex-end;
+					p {
+						text-align: right;
 
+					}
+				}
+			}
 		}
 	}
 }

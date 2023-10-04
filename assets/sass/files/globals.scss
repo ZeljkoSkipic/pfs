@@ -1,5 +1,127 @@
+@font-face {
+	font-display: swap;
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 500;
+	src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 600;
+	src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 700;
+	src: url(../fonts/Poppins-Bold.ttf);
+}
+
+
+
+body {
+	font-family: Poppins;
+	font-size: 16px;
+	line-height: 1.25;
+}
+
+.site-main {
+	z-index: 1;
+    position: relative;
+	max-width: 2560px;
+	margin-inline: auto;
+}
+
+ul {
+	@include clean-list;
+}
+
+blockquote {
+	margin: 0;
+	position: relative;
+	font-weight: 500;
+	max-width: 57rem;
+	font-size: 20px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -5rem;
+		top: 0;
+		line-height: 1;
+		background-image: url(../icons/open-quote.svg);
+		width: 33px;
+		height: 22px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		right: -33px;
+		bottom: 0;
+		line-height: 1;
+		background-image: url(../icons/close-quote.svg);
+		width: 33px;
+		height: 22px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	@include mob-only {
+		font-size: 16px;
+	}
+}
+
 .container {
 	width: var(--site-width);
-	max-width: var(--stite-max-width);
+	max-width: var(--site-max-width);
 	margin-inline: auto;
+}
+
+.title-1 {
+	font-size: var(--font-size-1);
+	line-height: 1;
+	span {
+		-webkit-text-stroke: 1.5px black;
+		color: transparent;
+	}
+}
+
+
+.title-2 {
+	font-size: var(--font-size-2);
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.title-3 {
+	font-size: var(--font-size-3);
+	font-weight: 500;
+}
+
+.title-4 {
+	font-size: var(--font-size-4);
+	font-weight: 500;
+}
+
+.title-5 {
+	font-size: var(--font-size-5);
+}
+
+.title-6 {
+	font-size: var(--font-size-6);
 }

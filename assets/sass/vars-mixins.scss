@@ -1,26 +1,28 @@
 :root {
-	--font-size-1: 5rem;
-	--font-size-2: 4.5rem;
-	--font-size-3: 4rem;
-	--font-size-4: 3rem;
-	--font-size-5: 2.5rem;
+	--font-size-1: 7rem;
+	--font-size-2: 3.6rem;
+	--font-size-3: 24px;
+	--font-size-4: 20px;
+
+	--font-size-5: 2.4rem;
 	--font-size-6: 20px;
 
 	--line-height: 1.2;
 
-	--space-1: 10rem;
-	--space-2: 8rem;
-	--space-3: 6rem;
-	--space-4: 3rem;
+	--space-1: 9rem;
+	--space-2: 4.5rem;
+	--space-3: 3rem;
+	--space-4: 20px;
 
-	--title-space-1: 6rem;
+	--title-space-1: 4rem;
 	--title-space-2: 4rem;
 	--title-space-3: 3rem;
 	--title-space-4: 2rem;
 
-	--color-1: #45eba5;
+	--color-1: #FFC812;
 	--color-2: #212121;
-	--color-3: #EB5E44;
+	--color-3: #FBF5E4;
+
 	--color-4: #33D4BE;
 
 	--bg-1: #f7f7f7;
@@ -345,7 +347,7 @@
 // Buttons
 
 @mixin btn {
-	padding: 1rem 2.5rem;
+	padding: 14px;
 	width: fit-content;
 	min-width: 150px;
 	display: inline-flex;
@@ -354,23 +356,43 @@
 	transition: var(--st);
 	position: relative;
 	overflow: hidden;
+	border: 1px solid #000;
 
-	color: #fff;
-	font-size: 1.6rem
+	font-size: 16px;
 }
 
 @mixin btn-1 {
 	@include btn;
+	color: #000;
+	font-weight: 700;
+	font-size: 14px;
 	background-color: var(--color-1);
+	&:hover {
+		background-color: #fff;
+	}
+	&:active {
+		border-color: #8A8C8E;
+		color: #8A8C8E;
+	}
 }
 
 @mixin btn-2 {
 	@include btn;
-	background-color: var(--color-2);
+	background-color: #fff;
+	padding-block: 8px;
+	color: #000;
 	&:not(:first-of-type) {
 		@include tab-min {
 			margin-left: 2rem;
 		}
+	}
+	&:hover {
+		background-color: var(--color-1);
+	}
+	&:active {
+		border-color: #000;
+		color: #fff;
+		background-color: #000;
 	}
 }
 

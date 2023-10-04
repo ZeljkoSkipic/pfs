@@ -133,3 +133,6 @@ add_action('init', function () {
         remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
     }
 });
+
+
+add_filter('use_block_editor_for_post', '__return_false', 10);
