@@ -111,8 +111,8 @@ footer .footer_inner .col:last-child p{color:#fff;margin-top:0}
 .home_hero .left .hh_text{margin-bottom:2.4rem}
 .home_hero .right{background-color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative}
 .home_hero .right video{width:100%;height:auto;cursor:pointer}
-.home_hero .right .video-control{position:absolute;bottom:16px;left:17px;width:35px;height:35px;background-color:transparent;border:0;line-height:0;padding:0;outline:0}
-.home_hero .right .video-control span{width:100%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;background-size:contain;background-repeat:no-repeat}
+.home_hero .right .video-control{position:absolute;width:100%;height:100%;background-color:transparent;border:0;line-height:0;padding:0;outline:0;cursor:pointer}
+.home_hero .right .video-control span{position:absolute;width:35px;height:35px;bottom:16px;left:17px;display:-webkit-box;display:-ms-flexbox;display:flex;background-size:contain;background-repeat:no-repeat}
 .home_hero .right .video-control .video-control-play{background-image:url(../../assets/icons/play.svg)}
 .home_hero .right .video-control .video-control-pause{display:none;background-image:url(../../assets/icons/pause.svg)}
 .home_hero .right .video-control.playing .video-control-play{display:none}
