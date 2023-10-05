@@ -84,9 +84,14 @@
 				&:not(:last-child) {
 					margin-right: 4rem;
 				}
-				&.current-menu-item {
+				&.current-menu-item:not(.ordering-link) {
 					> a {
 						font-weight: 700;
+					}
+					&.nav-btn {
+						a {
+							background-color: var(--color-1);
+						}
 					}
 				}
 				&.menu-item-has-children {

@@ -178,6 +178,10 @@
 				&:first-child {
 					font-weight: 600;
 				}
+				&:not(:first-child) {
+					font-size: 14px;
+					line-height: 18px;
+				}
 			}
 		}
 	}
@@ -186,4 +190,5 @@
 .footnote {
 	display: block;
 	width: 100%;
+	font-weight: 600;
 }

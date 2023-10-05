@@ -89,7 +89,7 @@ $hero_video = get_field('video')
 					</ul>
 				<?php endwhile; ?>
 			<?php endif; ?>
-			<strong class="footnote"><em><?php the_field('footnote'); ?></em></strong>
+			<em class="footnote"><?php the_field('footnote'); ?></em>
 		</div>
 	</div>
 </div>

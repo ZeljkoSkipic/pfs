@@ -282,7 +282,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_5 space_1">
+	<div class="product_sec_5 space_1" id="instructions">
 		<div class="container">
 			<h2 class="title-3"><?php the_field('sec5_title'); ?></h2>
 			<div><?php the_field('sec5_text'); ?></div>

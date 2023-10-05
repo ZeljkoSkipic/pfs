@@ -14,7 +14,6 @@
 		padding: var(--space-3);
 		z-index: 4;
 		position: relative;
-		cursor: help;
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column;
@@ -354,7 +353,7 @@
 			div {
 				p {
 					font-weight: 400;
-					font-size: 16px;
+					font-size: 14px;
 					line-height: 18px;
 				}
 			}
@@ -406,9 +405,13 @@
 					counter-increment: section;
 					content: counter(section) ". ";
 					margin-right: 5px;
+					font-size: 14px;
+					line-height: 18px;
 				}
 				p {
 					margin: 0;
+					font-size: 14px;
+					line-height: 18px;
 				}
 			}
 			@include mob-only {
