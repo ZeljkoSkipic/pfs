@@ -173,6 +173,9 @@
 		ul {
 			width: 50%;
 			margin-top: 25px;
+			@include mob-only {
+				width: 100%;
+			}
 			li {
 				margin-bottom: 10px;
 				&:first-child {

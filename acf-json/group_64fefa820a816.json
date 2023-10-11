@@ -300,7 +300,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "The Seattle Splint is a rare product that is cost-effective without being cheaply constructed. It's mandatory equipment for my lower extremity trauma patients.",
+            "default_value": "",
             "maxlength": "",
             "rows": 4,
             "placeholder": "",
@@ -498,5 +498,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696005685
+    "modified": 1697025478
 }

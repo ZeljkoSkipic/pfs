@@ -213,8 +213,10 @@
 		}
 	}
 	.col {
-		&:nth-of-type(3), &:nth-of-type(4) {
-			margin-top: 20px;
+		@include tab-min {
+			&:nth-of-type(3), &:nth-of-type(4) {
+				margin-top: 20px;
+			}
 		}
 	}
 }
@@ -269,6 +271,9 @@
 				div {
 					padding: 11px 20px;
 					font-size: 14px;
+					@include mob-only {
+						padding: 10px;
+					}
 				}
 			}
 			.table_head {
@@ -292,6 +297,20 @@
 			}
 			.shoe_size {
 				width: 25%;
+			}
+			@include mob-only {
+				.size {
+					width: 35%;
+				}
+				.calf {
+					width: 20%;
+				}
+				.height {
+					width: 22.5%;
+				}
+				.shoe_size {
+					width: 22.5%;
+				}
 			}
 		}
 	}
@@ -441,6 +460,21 @@
 			img {
 				width: auto;
 				height: auto;
+			}
+			p {
+				font-size: 14px;
+				line-height: 18px;
+				display: flex;
+				&:first-child {
+					margin-bottom: 6px;
+				}
+				&:not(:first-child) {
+					margin-top: 0;
+				}
+				span {
+					margin-right: 6px;
+					min-width: 10px;
+				}
 			}
 		}
 		@include tab-min {

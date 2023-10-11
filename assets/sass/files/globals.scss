@@ -38,6 +38,13 @@ body {
 	line-height: 1.25;
 }
 
+div {
+	scroll-margin-top: 9.35rem;
+	@include limbo-max {
+		scroll-margin-top: 70px;
+	}
+}
+
 .site-main {
 	z-index: 1;
     position: relative;
@@ -58,7 +65,7 @@ blockquote {
 	&::before {
 		content: '';
 		position: absolute;
-		left: -5rem;
+		left: -6rem;
 		top: 0;
 		line-height: 1;
 		background-image: url(../icons/open-quote.svg);

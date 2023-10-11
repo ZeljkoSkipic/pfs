@@ -62,7 +62,7 @@ $hero_video = get_field('video')
 			} ?>
 		</div>
 		<div class="right">
-			<blockquote><?php the_field('quote'); ?></blockquote>
+			<blockquote><?php esc_html( the_field('quote')); ?></blockquote>
 			<p class="person"><strong><?php the_field('person'); ?>, </strong><?php the_field('location'); ?></p>
 
 			<p class="list_title"><?php the_field('lists_title'); ?></p>

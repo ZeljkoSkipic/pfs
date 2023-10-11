@@ -220,6 +220,7 @@
 			display: flex;
 			align-items: center;
 			margin-bottom: 20px;
+			flex-wrap: wrap;
 			@include mob-only {
 				padding-left: 6rem;
 				background-size: 4rem;
