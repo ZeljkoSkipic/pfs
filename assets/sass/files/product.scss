@@ -177,8 +177,13 @@
 		@include limbo-min {
 			@include lg-width;
 			width: 62.5%;
+		}
+		@include desk-min {
 			padding-left: var(--space-1);
 			padding-right: 5vw;
+		}
+		@include limbo-only {
+			padding-inline: var(--space-3);
 		}
 		@include tab-max {
 			padding-inline: var(--space-2);
@@ -611,6 +616,15 @@
 		padding: var(--space-2);
 
 		@include flex;
+		@include limbo-only {
+			flex-direction: column;
+			> div {
+				width: 100%!important;
+				img {
+					width: auto;
+				}
+			}
+		}
 		width: 100%;
 		@include tab-max {
 			border-right: 2px solid #000;
