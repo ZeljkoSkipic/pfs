@@ -293,6 +293,7 @@
                     "collapsed": "",
                     "button_label": "Add List",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_64ff1e8c56856",
                     "sub_fields": [
                         {
                             "key": "field_64ff19042d9e5",
@@ -335,6 +336,7 @@
                             "collapsed": "",
                             "button_label": "Add Item",
                             "rows_per_page": 20,
+                            "parent_repeater": "field_64ff18df2d9e4",
                             "sub_fields": [
                                 {
                                     "key": "field_64ff1aefb3453",
@@ -357,11 +359,9 @@
                                     "append": "",
                                     "parent_repeater": "field_64ff190d2d9e6"
                                 }
-                            ],
-                            "parent_repeater": "field_64ff18df2d9e4"
+                            ]
                         }
-                    ],
-                    "parent_repeater": "field_64ff1e8c56856"
+                    ]
                 }
             ]
         },
@@ -908,9 +908,117 @@
             "endpoint": 0
         },
         {
-            "key": "field_6513fa646a222",
+            "key": "field_655f3d769bb94",
             "label": "Title",
             "name": "sec4_title_right",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_655f3d7b9bb95",
+            "label": "Info Boxes",
+            "name": "sec4_info_boxes_right",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Step",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_655f3d7b9bb96",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_655f3d7b9bb95"
+                },
+                {
+                    "key": "field_655f3d7b9bb97",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_655f3d7b9bb95"
+                }
+            ]
+        },
+        {
+            "key": "field_655f3db69bb98",
+            "label": "Bottom - Buckles",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6513fa646a222",
+            "label": "Title",
+            "name": "sec4_title_bottom",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1146,24 +1254,24 @@
             ]
         },
         {
-            "key": "field_6514085f7def4",
-            "label": "Contact Us",
-            "name": "contact_us",
+            "key": "field_655f462c69d33",
+            "label": "Subject Line",
+            "name": "sec4_subject_line",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "text",
-            "media_upload": 0,
-            "toolbar": "full",
-            "delay": 0
+            "default_value": "This is a subject line",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_651418a5723da",
@@ -1555,5 +1663,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695910831
+    "modified": 1701774111
 }

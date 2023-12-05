@@ -136,3 +136,22 @@ add_action('init', function () {
 
 
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+
+function wpforms_preselect_dropdown( $field, $form_data ) {
+    if($form_data['id'] == '232' &&  $field['id'] == '10' && isset($_GET['selectValue']) && !empty($_GET['selectValue'])){
+		$preselect_value = wp_strip_all_tags($_GET['selectValue']);
+
+        foreach ( $field['choices'] as $key => $choice ) {
+            if ( str_replace(" ", "-", strtolower($choice['label'])) == $preselect_value ) {
+                $field['choices'][$key]['default'] = '1';
+            }else{
+                unset($field['choices'][$key]['default']);
+            }
+        }
+    }
+
+    return $field;
+}
+
+add_filter( 'wpforms_field_data', 'wpforms_preselect_dropdown', 10 , 2 );

@@ -179,6 +179,7 @@ get_header();
 			<h3 class="title-4"><?php the_field('sec3_subtitle'); ?></h3>
 			<div class="sec3_intro">
 				<?php the_field('sec3_intro'); ?>
+				<?php get_template_part('template-parts/cunsult-btn-2'); ?>
 			</div>
 			<div class="sec3_info_boxes">
 				<?php
@@ -206,9 +207,9 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_4" id="optional">
+	<div class="product_sec_4">
 		<div class="container">
-			<div class="left space_2">
+			<div class="left space_2" id="placement">
 				<h2 class="title-3"><?php the_field('sec4_title_left'); ?></h2>
 				<?php
 
@@ -230,55 +231,87 @@ get_header();
 				</div>
 				<?php endif; ?>
 			</div>
-			<div class="right space_2">
-			<h2 class="title-3"><?php the_field('sec4_title_right'); ?></h2>
-			<h3><?php the_field('row1_title'); ?></h3>
-			<?php
 
-			if( have_rows('row1_instructions') ): ?>
-				<div class="instructions">
-				<?php while( have_rows('row1_instructions') ) : the_row(); ?>
-					<div class="col">
-					<?php
-					$text = get_sub_field('text'); ?>
-					<figure>
+			<div class="right space_2"  id="straps">
+				<h2 class="title-3"><?php the_field('sec4_title_right'); ?></h2>
+				<?php
+
+				if( have_rows('sec4_info_boxes_right') ): ?>
+				<div class="ps4_boxes">
+					<?php while( have_rows('sec4_info_boxes_right') ) : the_row(); ?>
+						<div class="ps4_box">
+						<?php
+						$text = get_sub_field('text'); ?>
 						<?php
 						$image = get_sub_field('image');
 						$size = 'full';
 						if( $image ) {
 							echo wp_get_attachment_image( $image, $size, "", array( "class" => "image" ) );
 						} ?>
-					</figure>
-					<div><?php echo $text; ?></div>
-					</div>
-				<?php endwhile; ?>
+						<div><?php echo $text; ?></div>
+						</div>
+					<?php endwhile; ?>
 				</div>
-			<?php endif; ?>
-			<h3><?php the_field('row2_title'); ?></h3>
-
-			<?php
-
-			if( have_rows('row2_instructions') ): ?>
-				<div class="instructions">
-				<?php while( have_rows('row2_instructions') ) : the_row(); ?>
-					<div class="col">
-					<?php
-					$text = get_sub_field('text'); ?>
-					<figure>
-						<?php
-						$image = get_sub_field('image');
-						$size = 'full';
-						if( $image ) {
-							echo wp_get_attachment_image( $image, $size, "", array( "class" => "image" ) );
-						} ?>
-					</figure>
-					<div><?php echo $text; ?></div>
-					</div>
-				<?php endwhile; ?>
-				</div>
-			<?php endif; ?>
-			<div><?php the_field('contact_us'); ?></div>
+				<?php endif; ?>
+			</div>
 		</div>
+	</div>
+
+	<div class="product_sec_4b space_2" id="buckles">
+		<div class="container">
+			<h2 class="title-3"><?php the_field('sec4_title_bottom'); ?></h2>
+			<div class="col">
+				<h3><?php the_field('row1_title'); ?></h3>
+				<?php
+
+				if( have_rows('row1_instructions') ): ?>
+					<div class="instructions">
+					<?php while( have_rows('row1_instructions') ) : the_row(); ?>
+						<div class="col">
+						<?php
+						$text = get_sub_field('text'); ?>
+						<figure>
+							<?php
+							$image = get_sub_field('image');
+							$size = 'full';
+							if( $image ) {
+								echo wp_get_attachment_image( $image, $size, "", array( "class" => "image" ) );
+							} ?>
+						</figure>
+						<div><?php echo $text; ?></div>
+						</div>
+					<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+			</div>
+
+			<div class="col">
+				<h3><?php the_field('row2_title'); ?></h3>
+				<?php
+				if( have_rows('row2_instructions') ): ?>
+					<div class="instructions">
+					<?php while( have_rows('row2_instructions') ) : the_row(); ?>
+						<div class="col">
+						<?php
+						$text = get_sub_field('text'); ?>
+						<figure>
+							<?php
+							$image = get_sub_field('image');
+							$size = 'full';
+							if( $image ) {
+								echo wp_get_attachment_image( $image, $size, "", array( "class" => "image" ) );
+							} ?>
+						</figure>
+						<div><?php echo $text; ?></div>
+						</div>
+					<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+			</div>
+
+			<div class="col">
+
+			</div>
 		</div>
 	</div>
 
@@ -299,7 +332,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_6">
+	<div class="product_sec_6" id="components">
 		<div class="ps6_top container">
 			<h2 class="title-3"><?php the_field('sec6_title'); ?></h2>
 		</div>

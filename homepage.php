@@ -27,6 +27,7 @@ $hero_video = get_field('video')
 				?>
 				<a class="btn-2" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
 			<?php endif; ?>
+			<?php get_template_part('template-parts/cunsult-btn-2'); ?>
  		</div>
 	</div>
 	<div class="right">
@@ -44,10 +45,25 @@ $hero_video = get_field('video')
 	</div>
 </div>
 
-<div class="home_sec_1 space_1">
+<div class="home_sec_1 space_1_2">
 	<div class="home_sec_1_inner container">
 		<h2 class="title-2"><?php the_field('sec1_title'); ?></h2>
 		<div class="home_sec_1_text"><?php the_field('sec1_text'); ?></div>
+		<?php
+		$sec1_ll = get_field('sec1_logo_link');
+		if( $sec1_ll ):
+			$sec1_ll_url = $sec1_ll['url'];
+			$sec1_ll_target = $sec1_ll['target'] ? $sec1_ll['target'] : '_self';
+			?>
+			<a class="sec1_logo_link" href="<?php echo esc_url( $sec1_ll_url ); ?>" target="<?php echo esc_attr( $sec1_ll_target ); ?>">
+				<?php
+				$sec1_logo = get_field('sec1_logo');
+				$size = 'full';
+				if( $sec1_logo ) {
+					echo wp_get_attachment_image( $sec1_logo, $size, "", array( "class" => "sec1_logo" ) );
+				} ?>
+			</a>
+		<?php endif; ?>
 	</div>
 </div>
 

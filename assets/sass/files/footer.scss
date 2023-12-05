@@ -5,11 +5,21 @@ footer {
 		@include mob-only {
 			flex-direction: column;
 		}
+		.btn-1 {
+			font-weight: 400;
+			width: 160px;
+			text-align: center;
+			padding: 7px 9px;
+			min-height: 41px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&:not(:first-child) {
+				margin-top: 2rem;
+			}
+		}
 		.col {
 			@include flex-col;
-			@include tab-min {
-				width: 30%;
-			}
 			@include mob-only {
 				&:not(:last-child) {
 					margin-bottom: var(--space-2);
@@ -17,16 +27,73 @@ footer {
 			}
 			&:first-child {
 				align-items: flex-start;
+				@include limbo-min {
+					width: 31%;
+				}
+				@include tab-only {
+					width: 30%;
+				}
+				@include tab-max {
+					order: 1;
+
+				}
 			}
 			&:nth-child(2) {
-				@include tab-min {
+				@include limbo-min {
 					align-items: center;
+					width: 38%;
 				}
-				img {
-					max-width: 230px;
-					object-fit: contain;
-					height: auto;
+				@include tab-only {
+					align-items: center;
+					width: 100%;
 				}
+				@include tab-max {
+					order: 3;
+					margin-top: 3rem;
+
+				}
+				display: flex;
+				justify-content: space-between;
+				.footer_logos {
+					@include flex;
+					@include tab-min {
+						align-items: center;
+					}
+					@include mob-only {
+						flex-direction: column;
+					}
+					img {
+						max-width: 200px;
+						object-fit: contain;
+						height: auto;
+						@include limbo-only {
+							max-width: 150px;
+						}
+					}
+					span {
+						color: #fff;
+						color: rgba(255, 255, 255, 0.65);
+						@include tab-min {
+							align-self: center;
+						}
+						@include desk-min {
+							margin-inline: 3rem;
+						}
+						@include limbo-only {
+							margin-inline: 1rem;
+						}
+						@include tab-only {
+							margin-inline: 2rem;
+						}
+					}
+					.logo_small {
+						max-width: 130px;
+						@include limbo-only {
+							max-width: 100px;
+						}
+					}
+				}
+
 				.copy {
 					color: #fff;
 					font-size: 14px;
@@ -37,6 +104,15 @@ footer {
 				}
 			}
 			&:last-child {
+				@include limbo-min {
+					width: 31%;
+				}
+				@include tab-only {
+					width: 65%;
+				}
+				@include tab-max {
+					order: 2;
+				}
 				a {
 					color: #fff;
 					font-weight: 600;
@@ -51,6 +127,14 @@ footer {
 					p {
 						text-align: right;
 
+					}
+				}
+				.footer_small_text {
+					max-width: 450px;
+					p {
+						font-size: 14px;
+						color: rgba(255, 255, 255, .65);
+						font-weight: 400;
 					}
 				}
 			}

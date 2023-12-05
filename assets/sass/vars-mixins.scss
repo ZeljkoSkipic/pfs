@@ -357,7 +357,7 @@
 	position: relative;
 	overflow: hidden;
 	border: 1px solid #000;
-
+	text-align: center;
 	font-size: 16px;
 }
 
@@ -382,9 +382,7 @@
 	padding-block: 8px;
 	color: #000;
 	&:not(:first-of-type) {
-		@include tab-min {
-			margin-left: 2rem;
-		}
+		margin-top: 2rem;
 	}
 	&:hover {
 		background-color: var(--color-1);

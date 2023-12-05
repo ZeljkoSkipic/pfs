@@ -20,8 +20,9 @@
 				display: block;
 			}
 		}
-		@include tab-min {
-			.left_content {
+		.left_content {
+			@include flex-col;
+			@include tab-min {
 				max-width: 674px;
 				margin-left: auto;
 				margin-right: var(--space-1);
@@ -37,9 +38,18 @@
 				width: 83%;
 			}
 		}
+		.btn-2 {
+			@include tab-min {
+				min-width: 312px;
+			}
+			@include mob-only {
+				width: 100%;
+				font-size: 14px;
+			}
+		}
 	}
 	.right {
-		background-color: #000;
+		background-color: var(--color-1);
 		display: flex;
 		position: relative;
 		video {
@@ -89,8 +99,12 @@
 .home_sec_1 {
 	text-align: center;
 	.home_sec_1_text {
-		max-width: 83rem;
+		max-width: 95rem;
 		margin-inline: auto;
+	}
+	.sec1_logo {
+		width: auto;
+		margin-top: calc(20px - 1em);
 	}
 }
 
