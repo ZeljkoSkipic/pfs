@@ -404,21 +404,21 @@
 	.left {
 		@include limbo-min {
 			border-right: 2px solid #000;
-			padding-right: var(--space-2);
+			padding-right: 8.4rem;
 		}
 	}
 	.ps4_boxes {
-		@include flex-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		counter-reset: section;
-		max-width: 514px;
+		gap: 4rem 7rem;
+		@include mob-only {
+			grid-template-columns: 1fr;
+		}
 		.ps4_box {
-			margin-bottom: 45px;
+			max-width: 273px;
 			@include tab-min {
-				width: 40%;
-				img {
-					object-fit: contain;
-					aspect-ratio: 198 / 159;
-				}
+				width: auto;
 			}
 			img {
 				height: auto;
@@ -447,13 +447,16 @@
 		}
 	}
 	.right {
+		.ps4_boxes {
+			margin-left: 0;
+   			margin-right: auto;
+		}
 		h2 {
-			max-width: 514px;
 			width: 100%;
 		}
 
 		@include limbo-min {
-			padding-left: var(--space-1);
+			padding-left: 8.4rem;
 			@include flex-col;
 			align-items: flex-end;
 		}

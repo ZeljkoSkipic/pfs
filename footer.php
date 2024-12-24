@@ -31,18 +31,33 @@ $phone = get_field('phone_number', 'option');
 			</div>
 			<div class="col">
 				<div class="footer_logos">
+
+				<?php
+
+
+					?>
+					 </a>
+
 					<?php
 					$logo = get_field('logo', 'option');
 					$size = 'full';
-					if( $logo ) {
-						echo wp_get_attachment_image( $logo, $size, "", array( "class" => "logo" ) );
+					$logo_link = get_field('logo_link', 'option');
+					$logo_link_url = $logo_link['url'];
+					$logo_link_title = $logo_link['title'];
+					$logo_link_target = $logo_link['target'] ? $logo_link['target'] : '_self'; ?>
+					<a href="<?php echo esc_url( $logo_link_url ); ?>" target="<?php echo esc_attr( $logo_link_target ); ?>">
+					<?php if( $logo ) {
+						echo wp_get_attachment_image( $logo, $size, "", array( "class" => "footer_logo logo" ) );
 					} ?>
+					</a>
 					<span>by</span>
-						<?php
+					<a href="<?php echo esc_url( $logo_link_url ); ?>" target="<?php echo esc_attr( $logo_link_target ); ?>">
+					<?php
 					$logo_small = get_field('logo_small', 'option');
 					if( $logo_small ) {
-						echo wp_get_attachment_image( $logo_small, $size, "", array( "class" => "logo_small" ) );
+						echo wp_get_attachment_image( $logo_small, $size, "", array( "class" => "footer_logo logo_small" ) );
 					} ?>
+					</a>
 				</div>
 				<span class="copy"><?php the_field('copy', 'option'); ?></span>
 			</div>

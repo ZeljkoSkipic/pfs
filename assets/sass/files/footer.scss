@@ -57,12 +57,18 @@ footer {
 				.footer_logos {
 					@include flex;
 					@include tab-min {
-						align-items: center;
+						align-items: flex-end;
+						.logo {
+							margin-bottom: -9px;
+						}
+						.logo_small {
+							margin-bottom: -6px;
+						}
 					}
 					@include mob-only {
 						flex-direction: column;
 					}
-					img {
+					.footer_logo {
 						max-width: 200px;
 						object-fit: contain;
 						height: auto;
@@ -73,9 +79,7 @@ footer {
 					span {
 						color: #fff;
 						color: rgba(255, 255, 255, 0.65);
-						@include tab-min {
-							align-self: center;
-						}
+						display: flex;
 						@include desk-min {
 							margin-inline: 3rem;
 						}
@@ -100,6 +104,9 @@ footer {
 					margin-top: 8px;
 					@include tab-min {
 						text-align: center;
+					}
+					@include tab-only {
+						margin-top: 16px;
 					}
 				}
 			}

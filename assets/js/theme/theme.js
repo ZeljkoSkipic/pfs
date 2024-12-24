@@ -38,6 +38,4 @@ videoElement.addEventListener('ended', () => {
 	playPauseButton.classList.remove('playing');
 });
 
-
-
 });

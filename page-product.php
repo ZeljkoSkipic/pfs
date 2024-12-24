@@ -39,7 +39,7 @@ get_header();
 			} ?>
 		</div>
 	</div>
-	<div class="product_sec_1" id="applications">
+	<div class="product_section product_sec_1" id="applications">
 		<div class="product_sec_1_inner">
 			<div class="left">
 				<?php
@@ -88,7 +88,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<div class="product_sec_2" id="sizing">
+	<div class="product_section product_sec_2" id="sizing">
 		<div class="product_sec_2_inner">
 			<div class="ps2_inner_left space_1">
 				<div class="ps2_left_inner">
@@ -173,7 +173,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_3 space_1_2" id="customization">
+	<div class="product_section product_sec_3 space_1_2" id="customization">
 		<div class="container">
 			<h2 class="title-3"><?php the_field('sec3_title'); ?></h2>
 			<h3 class="title-4"><?php the_field('sec3_subtitle'); ?></h3>
@@ -207,7 +207,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_4">
+	<div class="product_section product_sec_4">
 		<div class="container">
 			<div class="left space_2" id="placement">
 				<h2 class="title-3"><?php the_field('sec4_title_left'); ?></h2>
@@ -257,7 +257,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_4b space_2" id="buckles">
+	<div class="product_section product_sec_4b space_2" id="buckles">
 		<div class="container">
 			<h2 class="title-3"><?php the_field('sec4_title_bottom'); ?></h2>
 			<div class="col">
@@ -315,7 +315,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_5 space_1" id="instructions">
+	<div class="product_section product_sec_5 space_1" id="instructions">
 		<div class="container">
 			<h2 class="title-3"><?php the_field('sec5_title'); ?></h2>
 			<div><?php the_field('sec5_text'); ?></div>
@@ -332,7 +332,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="product_sec_6" id="components">
+	<div class="product_section product_sec_6" id="components">
 		<div class="ps6_top container">
 			<h2 class="title-3"><?php the_field('sec6_title'); ?></h2>
 		</div>

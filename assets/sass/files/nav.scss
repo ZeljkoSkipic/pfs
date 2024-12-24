@@ -125,7 +125,7 @@
 							transform: rotate(0);
 							height: 15px;
 							top: -5px;
-							right: 5px
+							right: 5px;
 						}
 						&:hover {
 							> a {
@@ -153,6 +153,8 @@
 					transform: rotate(90deg);
 					cursor: pointer;
 					transition: var(--st);
+					pointer-events: none;
+
 					svg {
 					stroke: #000;
 					width: 16px;
@@ -178,4 +180,11 @@
 		}
 	}
 
+}
+
+
+.focused, .focused a {
+	font-weight: 600;
+	font-style: italic;
+	color: red!important;
 }
