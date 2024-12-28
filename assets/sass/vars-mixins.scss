@@ -364,7 +364,7 @@
 @mixin btn-1 {
 	@include btn;
 	color: #000;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 14px;
 	background-color: var(--color-1);
 	&:hover {

@@ -53,8 +53,8 @@ function stier_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 31,
+			'width'       => 200,
 			'flex-width'  => true,
 			'flex-height' => true,
 		)
@@ -70,7 +70,10 @@ function stier_scripts() {
 	$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.js'));
 
 	wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/assets/dist/theme.css', array(), $css_cache_buster, 'all' );
-	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/dist/theme.js', array('jquery'), $js_cache_buster );
+	wp_enqueue_script( 'theme-script', get_stylesheet_directory_uri() . '/assets/dist/theme.js', array('jquery'), $js_cache_buster );
+
+	wp_enqueue_script( 'fancybox', get_stylesheet_directory_uri() . '/assets/dist/vendor/fancybox.js', array(), '5.0.36' );
+	wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/assets/dist/vendor/fancybox.css', array(), '5.0.36' );
 
 	wp_enqueue_style( 'stier-style', get_stylesheet_uri(), array(), S_VERSION );
 
@@ -78,6 +81,13 @@ function stier_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'stier_scripts' );
+
+// Admin Styles
+function stier_admin_styles()
+{
+	wp_enqueue_style('admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css');
+}
+add_action('admin_enqueue_scripts', 'stier_admin_styles');
 
 // Custom template tags for this theme.
 
